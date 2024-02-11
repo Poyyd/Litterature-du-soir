@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Littérature du soir</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #000; /* Couleur du texte en noir */
+        }
+        header {
+            background-color: #f2f2f2; /* Couleur de fond pour l'en-tête */
+            color: #000; /* Couleur du texte */
+            padding: 10px;
+            text-align: center;
+        }
+        h1 {
+            margin: 5px;
+        }
+        nav {
+             text-align: center; /* Centrer les liens */
+             margin-bottom: 20px; /* Ajouter un espace en bas du header */
+             margin-top: 20px; /* Ajouter un espace au-dessus du header */
+        }
+        nav a {
+            color: #000; /* Couleur des liens */
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 10px 10px 20px 10px; /* Espacement entre les liens */
+        }
+        nav a:hover {
+            background-color: #ddd; /* Légère modification de couleur au survol */
+        }
+        .hidden {
+            display: none; /* Cacher par défaut */
+        }
+        .visible {
+            display: block; /* Afficher */
+        }
+        section {
+            padding: 20px;
+            text-align: justify; /* Justifier le texte */
+        }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px 0;
+            text-align: center;
+            position: fixed; /* Positionnement fixe */
+            bottom: 0; /* En bas de la fenêtre */
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Littérature du soir</h1>
+        <nav>
+            <a href="#" onclick="showSection('accueil')">Accueil</a>
+            <a href="#" onclick="showSection('histoires')">Histoires</a>
+            <a href="#" onclick="showSection('forum')">Forum</a>
+            <a href="#" onclick="showSection('a_propos')">À propos</a>
+            <a href="#" onclick="showSection('contact')">Contact</a>
+        </nav>
+    </header>
+    <section id="accueil" class="visible">
+        <h2>Bienvenue sur Littérature du soir !</h2>
+        <p>Détendez-vous et plongez-vous dans des histoires captivantes pour une fin de journée apaisante.</p>
+    </section>
+    <section id="histoires" class="hidden">
+        <h2>10.1 - Un sac de billes de Joseph Joffo - livre audio et résumé - chapitre 9 suite</h2>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/VMDqrD1h0Zc" frameborder="0" allowfullscreen></iframe>
+    </section>
+     <section id="forum" class="hidden">
+        <h2>Forum</h2>
+        <div id="disqus_thread"></div>
+        <script>
+            /**
+             *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+             *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables */
+            /*
+            var disqus_config = function () {
+                this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+                this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function() { // DON'T EDIT BELOW THIS LINE
+                var d = document, s = d.createElement('script');
+                s.src = 'https://litterature-du-soir.disqus.com/embed.js'; // Replace litterature-du-soir with your forum shortname
+                s.setAttribute('data-timestamp', +new Date());
+                (d.head || d.body).appendChild(s);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </section>
+    <section id="a_propos" class="hidden">
+        <h2>À propos de nous</h2>
+        <p>Notre mission est de partager la passion de la lecture avec le monde entier.</p>
+    </section>
+    <section id="contact" class="hidden">
+    <h2>Contactez-nous</h2>
+    <p>Vous avez des questions ? N'hésitez pas à nous contacter !</p>
+    <a href="https://www.youtube.com/@litteraturedusoir" target="_blank">
+        <img src="https://th.bing.com/th/id/OIP.p_klDcwGyZM_bIMNwEuRqwHaHa?rs=1&pid=ImgDetMain" alt="Logo YouTube" style="width: 100px; height: auto; display: inline-block; vertical-align: middle; margin-right: 20px;">
+         <p><a href="https://www.instagram.com/litteraturedusoir/" target="_blank">
+        <img src="https://th.bing.com/th/id/R.39a0355324b566addd5b8ced6ee2bd12?rik=1Ztogg%2b4ON9nIQ&pid=ImgRaw&r=0" alt="Logo Instagram" style="width: 80px; height: auto; display: inline-block; vertical-align: middle; margin-right: 16px;">
+    </a></p>
+</section>
+
+    </section>
+        <footer style="padding: 0px 0;">
+    <p>&copy; 2024 Littérature du soir. Tous droits réservés.</p>
+    </footer>
+
+    <script>
+        function showSection(sectionId) {
+            // Masquer toutes les sections
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.classList.remove('visible');
+                section.classList.add('hidden');
+            });
+            // Afficher la section spécifique
+            document.getElementById(sectionId).classList.remove('hidden');
+            document.getElementById(sectionId).classList.add('visible');
+        }
+    </script>
+</body>
+</html>
